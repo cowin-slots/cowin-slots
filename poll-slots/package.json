@@ -1,0 +1,18 @@
+{
+  "name": "cowin-slots-updater",
+  "version": "1.0.0",
+  "description": "Poll the CoWIN API for vaccine slot availability",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "lulz",
+  "license": "GPLv2",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "mongoose": "^5.12.7"
+  }
+}
