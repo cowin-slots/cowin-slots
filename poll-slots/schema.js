@@ -10,10 +10,7 @@ const db = mongoose.connection
 const dataSchema = new Schema({
     districts: new Schema({
         18: new Schema({
-            id: Number,
-            name: String,
-            state_name: String,
-            state_id: Number,
+            id: Number, // distSchema.cowin_id
             centers: new Schema({
                 id: Number,
                 name: String,
@@ -28,13 +25,11 @@ const dataSchema = new Schema({
                     vax: String,
                     timings: [String]
                 })
-            })
+            }),
+            phones: [Number]
         }),
         45: new Schema({
             id: Number,
-            name: String,
-            state_name: String,
-            state_id: Number,
             centers: new Schema({
                 id: Number,
                 name: String,
@@ -49,12 +44,23 @@ const dataSchema = new Schema({
                     vax: String,
                     timings: [String]
                 })
-            })
+            }),
+            phones: [Number]
         })
     })
 })
 
+const distSchema = new Schema({
+    id: Number,
+    cowin_id: Number,
+    name: String,
+    state_name: String,
+    state_id: String,
+    pincodes: [Number]
+})
+
 module.exports = mongoose.model('Data', dataSchema)
+module.exports = mongoose.model('Districts', distSchema)
 
 // const centerSchema = new Schema({
 //     id: Number,
