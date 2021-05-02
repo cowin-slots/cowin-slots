@@ -60,11 +60,17 @@ const distSchema = new Schema({
 const pollQueueSchema = new Schema({
     18: new Schema({
         id: Number, //distSchema.cowin_id
-        phones: [Number]
+        phones: new Schema({
+            chat_id: Number,
+            phone: String
+        })
     }),
     45: new Schema({
         id: Number, //distSchema.cowin_id
-        phones: [Number]
+        phones: new Schema({
+            chat_id: Number,
+            phone: String
+        })
     })
 })
 
