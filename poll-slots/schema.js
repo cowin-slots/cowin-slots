@@ -31,18 +31,20 @@ const stateSchema = new Schema({
     })
 })
 
-const centerSchema = new Schema({
-    id: Number,
-    name: String,
-    pin: Number,
-    state: String,
-    dist: String,
-    block: String,
-    fee: String,
-    slots: new Schema({
-        id: Number,
-        age_limit: Number,
-        vax: String,
-        timings: [String]
-    })
-  })
+module.exports = mongoose.model('States', stateSchema)
+
+// const centerSchema = new Schema({
+//     id: Number,
+//     name: String,
+//     pin: Number,
+//     state: String,
+//     dist: String,
+//     block: String,
+//     fee: String,
+//     slots: new Schema({
+//         id: Number,
+//         age_limit: Number,
+//         vax: String,
+//         timings: [String]
+//     })
+//   })
