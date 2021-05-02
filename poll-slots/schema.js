@@ -25,8 +25,7 @@ const dataSchema = new Schema({
                     vax: String,
                     timings: [String]
                 })
-            }),
-            phones: [Number]
+            })
         }),
         45: new Schema({
             id: Number,
@@ -44,8 +43,7 @@ const dataSchema = new Schema({
                     vax: String,
                     timings: [String]
                 })
-            }),
-            phones: [Number]
+            })
         })
     })
 })
@@ -59,8 +57,14 @@ const distSchema = new Schema({
     pincodes: [Number]
 })
 
+const pollQueueSchema = new Schema({
+    id: Number, //distSchema.cowin_id
+    phones: [Number]
+})
+
 module.exports = mongoose.model('Data', dataSchema)
 module.exports = mongoose.model('Districts', distSchema)
+module.exports = mongoose.model('Pollqueue', pollQueueSchema)
 
 // const centerSchema = new Schema({
 //     id: Number,
