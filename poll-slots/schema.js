@@ -13,7 +13,7 @@ const dataSchema = new Schema({
             id: Number,
             name: String,
             state_name: String,
-            state_id = Number,
+            state_id: Number,
             centers: new Schema({
                 id: Number,
                 name: String,
@@ -33,6 +33,8 @@ const dataSchema = new Schema({
         45: new Schema({
             id: Number,
             name: String,
+            state_name: String,
+            state_id: Number,
             centers: new Schema({
                 id: Number,
                 name: String,
