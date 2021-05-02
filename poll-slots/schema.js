@@ -58,8 +58,14 @@ const distSchema = new Schema({
 })
 
 const pollQueueSchema = new Schema({
-    id: Number, //distSchema.cowin_id
-    phones: [Number]
+    18: new Schema({
+        id: Number, //distSchema.cowin_id
+        phones: [Number]
+    }),
+    45: new Schema({
+        id: Number, //distSchema.cowin_id
+        phones: [Number]
+    })
 })
 
 module.exports = mongoose.model('Data', dataSchema)
